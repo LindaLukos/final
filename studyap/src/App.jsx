@@ -3,12 +3,12 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import GroupDetails from './components/GroupDetails';
 import UserProfile from './components/UserProfile';
-import EditGroup from './components/EditGroup';
 import Login from './components/Login';
 import Create from './components/Create';
 import Admin from './components/Admin';
+import { Edit } from '@mui/icons-material';
+import Group from './components/Group';
 
 const App = () => {
     // Mock user data for standalone frontend
@@ -47,10 +47,10 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Home user={user} />} />
                 <Route path='/login' element={<Login onLogin={handleLogin} />} />
-                <Route path='/group/:id' element={<GroupDetails user={user} />} />
+                <Route path='/group/:id' element={<Group user={user} />} />
                 <Route path='/profile' element={<UserProfile user={user} />} />
-                <Route path='/create-group' element={<Create user={user} />} />
-                <Route path='/edit-group/:id' element={<EditGroup user={user} />} />
+                <Route path='/create' element={<Create user={user} />} />
+                <Route path='/edit-group/:id' element={<Edit user={user} />} />
                 <Route path='/admin' element={<Admin user={user} />} />
             </Routes>
         </div>
