@@ -182,6 +182,7 @@ const UserProfile = ({ user, groups = [], onLeaveGroup }) => {
                         ) : (
                             <Button 
                                 variant="outlined" 
+                               
                                 onClick={() => setIsEditing(true)}
                             >
                                 Edit Profile
@@ -261,8 +262,10 @@ const UserProfile = ({ user, groups = [], onLeaveGroup }) => {
                                 variant="contained" 
                                 onClick={() => navigate('/')}
                                 sx={{ mt: 2 }}
+                                
                             >
                                 Browse Study Groups
+                                
                             </Button>
                         </Box>
                     )}

@@ -7,8 +7,10 @@ import UserProfile from './components/UserProfile';
 import Login from './components/Login';
 import Create from './components/Create';
 import Admin from './components/Admin';
-import { Edit } from '@mui/icons-material';
 import Group from './components/Group';
+import Edit from './components/Edit';
+// Remove the Edit import from @mui/icons-material if you have an Edit component
+// import EditGroup from './components/EditGroup'; // Uncomment if you have this component
 
 const App = () => {
     // Mock user data for standalone frontend
@@ -20,6 +22,9 @@ const App = () => {
         role: 'user',
         isAdmin: false
     });
+
+    // State to store created groups
+    const [groups, setGroups] = useState([]);
 
     const handleLogin = (userData) => {
         // Mock login - set user data based on form input or use default
@@ -41,17 +46,32 @@ const App = () => {
         console.log('Mock logout successful');
     };
 
+    const handleCreateGroup = (groupData) => {
+        const newGroup = {
+            id: Math.random().toString(36).substr(2, 9),
+            ...groupData,
+            createdBy: user._id,
+            createdAt: new Date().toISOString(),
+            status: 'pending',
+            members: [user._id]
+        };
+        
+        setGroups(prevGroups => [...prevGroups, newGroup]);
+        console.log('Group created:', newGroup);
+        return newGroup;
+    };
+
     return (
         <div>
             <Navbar user={user} onLogout={handleLogout} />
             <Routes>
-                <Route path='/' element={<Home user={user} />} />
+                <Route path='/' element={<Home user={user} groups={groups} />} />
                 <Route path='/login' element={<Login onLogin={handleLogin} />} />
-                <Route path='/group/:id' element={<Group user={user} />} />
+                <Route path='/group/:id' element={<Group user={user} groups={groups} />} />
                 <Route path='/profile' element={<UserProfile user={user} />} />
-                <Route path='/create' element={<Create user={user} />} />
-                <Route path='/edit-group/:id' element={<Edit user={user} />} />
-                <Route path='/admin' element={<Admin user={user} />} />
+                <Route path='/create' element={<Create user={user} onCreateGroup={handleCreateGroup} />} />
+                <Route path='/edit' element={<Edit user={user} groups={groups} />} />
+                <Route path='/admin' element={<Admin user={user} groups={groups} />} />
             </Routes>
         </div>
     );
