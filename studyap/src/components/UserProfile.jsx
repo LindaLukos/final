@@ -253,20 +253,23 @@ const UserProfile = ({ user, groups = [], onLeaveGroup }) => {
                                 </div>
                             ))}
                         </List>
+                        
                     ) : (
                         <Box sx={{ textAlign: 'center', py: 4 }}>
                             <Typography variant="body1" color="text.secondary" gutterBottom>
-                                You haven't joined any study groups yet.
+                                You can browse the groups you have joined
                             </Typography>
                             <Button 
-                                variant="contained" 
-                                onClick={() => navigate('/')}
-                                sx={{ mt: 2 }}
-                                
-                            >
-                                Browse Study Groups
-                                
-                            </Button>
+  variant="contained" 
+  onClick={() => {
+    console.log('Redirecting to home...');
+    navigate('/');
+  }}
+  sx={{ mt: 2 }}
+>
+  Browse Study Groups
+</Button>
+
                         </Box>
                     )}
                 </CardContent>

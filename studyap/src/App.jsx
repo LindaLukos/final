@@ -68,10 +68,12 @@ const App = () => {
                 <Route path='/' element={<Home user={user} groups={groups} />} />
                 <Route path='/login' element={<Login onLogin={handleLogin} />} />
                 <Route path='/group/:id' element={<Group user={user} groups={groups} />} />
-                <Route path='/profile' element={<UserProfile user={user} />} />
+                <Route path='/profile' element={<UserProfile user={user} groups={groups} />} />
                 <Route path='/create' element={<Create user={user} onCreateGroup={handleCreateGroup} />} />
                 <Route path='/edit' element={<Edit user={user} groups={groups} />} />
                 <Route path='/admin' element={<Admin user={user} groups={groups} />} />
+              
+
             </Routes>
         </div>
     );
