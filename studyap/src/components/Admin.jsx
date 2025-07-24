@@ -22,27 +22,35 @@ const Admin = () => {
     const [groups, setGroups] = useState([
         {
             _id: '1',
-            title: 'React Study Group',
+            title: 'Computer Science',
             subject: 'Software Development',
-            creator: { name: 'Peter' },
-            members: ['1', '2', '3'],
+            creator: { name: 'Linda' },
+            members: ['1', '2', '3','4','5'],
             status: 'pending'
         },
         {
             _id: '2',
-            title: 'Machine Learning Basics',
-            subject: 'Data Science',
-            creator: { name: 'Bob Smith' },
+            title: 'Maths and arithmetics',
+            subject: 'Problem solving',
+            creator: { name: 'Linda' },
             members: ['1', '2'],
-            status: 'approved'
+            status: 'pending'
         },
         {
             _id: '3',
-            title: 'Python Programming',
+            title: 'C Programming',
             subject: 'Programming',
-            creator: { name: 'Carol White' },
+            creator: { name: 'Suhana' },
+            members: ['1','2'],
+            status: 'pending'
+        },
+        {
+            _id: '4',
+            title: 'Biology ',
+            subject: 'biology',
+            creator: { name: 'Suhana' },
             members: ['1'],
-            status: 'rejected'
+            status: 'pending'
         }
     ]);
 
@@ -50,23 +58,30 @@ const Admin = () => {
     const [users, setUsers] = useState([
         {
             _id: '1',
-            name: 'Alice Johnson',
-            email: 'alice@example.com',
+            name: 'Suhana N',
+            email: 'suhana@gmail.com',
             contactNumber: '1234567890',
             isBlocked: false
         },
         {
             _id: '2',
-            name: 'Bob Smith',
-            email: 'bob@example.com',
+            name: 'Linda Ann',
+            email: 'linda@gmail.com',
             contactNumber: '0987654321',
             isBlocked: false
         },
         {
             _id: '3',
-            name: 'Carol White',
+            name: 'Suhana',
             email: 'carol@example.com',
             contactNumber: '5555555555',
+            isBlocked: true
+        },
+        {
+            _id: '4',
+            name: 'Linda',
+            email: 'linda@gmail.com',
+            contactNumber: '9303932922',
             isBlocked: true
         }
     ]);

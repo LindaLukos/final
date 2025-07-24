@@ -39,7 +39,7 @@ const Home = ({ user }) => {
                     { _id: 'user3', name: 'Jordan Smith', avatar: 'JS' },
                     { _id: 'user4', name: 'Sofia Rodriguez', avatar: 'SR' }
                 ],
-                creator: { _id: 'user2', name: 'Maya Patel' },
+                creator: { _id: 'user2', name: 'linda' },
                 createdDate: '2025-06-15',
                 maxMembers: 8
             },
@@ -57,7 +57,7 @@ const Home = ({ user }) => {
                     { _id: 'user5', name: 'Ethan Williams', avatar: 'EW' },
                     { _id: 'user6', name: 'Priya Kumar', avatar: 'PK' }
                 ],
-                creator: { _id: 'user1', name: 'Alex Chen' },
+                creator: { _id: 'user1', name: 'Suhana' },
                 createdDate: '2025-06-20',
                 maxMembers: 6
             },
@@ -77,7 +77,7 @@ const Home = ({ user }) => {
                     { _id: 'user10', name: 'Zoe Davis', avatar: 'ZD' },
                     { _id: 'user11', name: 'Ryan Park', avatar: 'RP' }
                 ],
-                creator: { _id: 'user7', name: 'Marcus Johnson' },
+                creator: { _id: 'user7', name: 'Linda' },
                 createdDate: '2025-06-18',
                 maxMembers: 10
             },
@@ -95,7 +95,7 @@ const Home = ({ user }) => {
                     { _id: 'user13', name: 'Noah Anderson', avatar: 'NA' },
                     { _id: 'user14', name: 'Aisha Okafor', avatar: 'AO' }
                 ],
-                creator: { _id: 'user12', name: 'Isabella Thompson' },
+                creator: { _id: 'user12', name: 'Suhana' },
                 createdDate: '2025-06-12',
                 maxMembers: 8
             },
@@ -114,7 +114,7 @@ const Home = ({ user }) => {
                     { _id: 'user17', name: 'Emma O\'Connor', avatar: 'EO' },
                     { _id: 'user18', name: 'David Kim', avatar: 'DK' }
                 ],
-                creator: { _id: 'user15', name: 'Grace Liu' },
+                creator: { _id: 'user15', name: 'Linda' },
                 createdDate: '2025-06-10',
                 maxMembers: 6
             },
